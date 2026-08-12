@@ -1,0 +1,173 @@
+.contact-page {
+  min-height: 100vh;
+  background: #fbf8f2;
+  color: #24130f;
+  text-align: left;
+}
+
+.contact-hero {
+  padding: 92px 7vw 56px;
+  background:
+    linear-gradient(110deg, rgba(43, 23, 18, 0.92), rgba(43, 23, 18, 0.72)),
+    url("../assets/hotel.jpg") center/cover;
+  color: #fff8ec;
+}
+
+.contact-kicker,
+.contact-section-heading p,
+.preview-title {
+  color: #d6aa5b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  color: #fff8ec;
+  font-family: Georgia, serif;
+  font-size: clamp(44px, 8vw, 86px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+.contact-intro {
+  color: rgba(255, 248, 236, 0.86);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.contact-form-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  gap: 44px;
+  padding: 56px 7vw 76px;
+}
+
+.contact-section-heading h2 {
+  color: #24130f;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-form label {
+  color: #4b342d;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #dfd2bd;
+  border-radius: 8px;
+  background: #fffdf8;
+  color: #24130f;
+  font: inherit;
+  font-size: 16px;
+  padding: 14px 16px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d6aa5b;
+  box-shadow: 0 0 0 3px rgba(214, 170, 91, 0.2);
+}
+
+.message-field,
+.email-preview,
+.contact-actions {
+  grid-column: 1 / -1;
+}
+
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.email-preview {
+  border: 1px solid #eadfcd;
+  border-radius: 8px;
+  background: #fffaf0;
+  padding: 20px;
+}
+
+.email-preview p {
+  color: #3a251f;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.email-preview pre {
+  color: #4b342d;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 14px 0 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.contact-actions button,
+.secondary-email-link {
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 22px;
+  text-decoration: none;
+}
+
+.contact-actions button {
+  background: #d6aa5b;
+  border: 1px solid #d6aa5b;
+  color: #24130f;
+  cursor: pointer;
+}
+
+.secondary-email-link {
+  border: 1px solid #cfbea1;
+  color: #3a251f;
+}
+
+@media (max-width: 840px) {
+  .contact-form-section,
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .contact-actions button,
+  .secondary-email-link {
+    text-align: center;
+  }
+}
