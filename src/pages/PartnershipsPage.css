@@ -1,26 +1,37 @@
 .partnerships-page {
-  background: #fbf8f2;
+  background: #180504;
   color: #24130f;
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
 }
 
 .partnerships-hero {
-  align-items: end;
   background:
-    linear-gradient(90deg, rgba(42, 9, 8, 0.92), rgba(42, 9, 8, 0.54)),
-    linear-gradient(180deg, rgba(42, 9, 8, 0.12), #2a0908),
+    linear-gradient(90deg, rgba(24, 5, 4, 0.94), rgba(24, 5, 4, 0.7) 42%, rgba(24, 5, 4, 0.2)),
+    linear-gradient(180deg, rgba(24, 5, 4, 0), #180504),
     url("../assets/story.jpg") center/cover;
   color: #fff8ec;
-  display: grid;
-  gap: 46px;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
-  min-height: 680px;
-  padding: 132px 7vw 84px;
+  min-height: 640px;
+  padding: 122px 7vw 78px;
+  position: relative;
+}
+
+.partnerships-hero::after {
+  background: rgba(242, 208, 137, 0.34);
+  bottom: 54px;
+  content: "";
+  height: 1px;
+  left: 7vw;
+  position: absolute;
+  right: 7vw;
+}
+
+.partnerships-hero-copy {
+  max-width: 980px;
 }
 
 .partnerships-hero h1,
 .partnerships-hero-card strong,
-.partnerships-intro h2,
+.ownership-brief h2,
 .partnership-pillar h3,
 .owner-support-copy h2,
 .partnership-process h2 {
@@ -31,27 +42,32 @@
 
 .partnerships-hero h1 {
   color: #fff8ec;
-  font-size: clamp(48px, 7vw, 104px);
+  font-size: clamp(46px, 6vw, 88px);
   line-height: 0.96;
-  margin: 0 0 24px;
-  max-width: 1080px;
+  margin: 0 0 28px;
+  max-width: 980px;
 }
 
 .partnerships-hero-copy > p:last-child {
   color: rgba(255, 248, 236, 0.84);
-  font-size: clamp(18px, 1.6vw, 22px);
-  line-height: 1.62;
-  max-width: 780px;
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.66;
+  max-width: 760px;
 }
 
 .partnerships-hero-card {
-  background:
-    linear-gradient(145deg, rgba(255, 250, 240, 0.96), rgba(248, 233, 204, 0.96));
+  align-items: end;
+  background: rgba(255, 250, 240, 0.94);
   border: 1px solid rgba(214, 170, 91, 0.72);
   border-radius: 8px;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
   color: #24130f;
-  padding: 34px;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1fr);
+  margin-top: 58px;
+  max-width: 980px;
+  padding: 28px 34px;
 }
 
 .partnerships-hero-card span,
@@ -61,80 +77,116 @@
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2.6px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
 .partnerships-hero-card strong {
   display: block;
-  font-size: 34px;
+  font-size: clamp(26px, 2.6vw, 38px);
   line-height: 1.05;
-  margin-bottom: 18px;
+  margin-bottom: 0;
 }
 
 .partnerships-hero-card p,
-.partnerships-intro > p,
+.ownership-brief p,
 .partnership-pillar p,
 .owner-support-copy p,
-.partnership-step p {
+.partnership-step p,
+.ownership-model p {
   font-weight: 500;
   line-height: 1.68;
 }
 
 .partnerships-hero-card p,
+.ownership-brief p,
 .partnership-pillar p,
-.owner-support-copy p {
+.owner-support-copy p,
+.ownership-model p {
   color: #5b443c;
   font-size: 16px;
 }
 
-.partnerships-intro {
-  align-items: end;
-  background: #2a0908;
+.partnerships-overview {
+  background: #180504;
   color: #fff8ec;
   display: grid;
-  gap: 48px;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 520px);
-  padding: 70px 7vw 82px;
+  gap: 0;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.72fr);
+  padding: 86px 7vw 0;
 }
 
-.partnerships-intro h2 {
-  color: #fff8ec;
-  font-size: clamp(38px, 5.2vw, 76px);
+.ownership-brief {
+  background: #fffaf0;
+  border-radius: 8px 0 0 8px;
+  color: #24130f;
+  padding: 58px;
+}
+
+.ownership-brief h2 {
+  color: #24130f;
+  font-size: clamp(38px, 5vw, 74px);
   line-height: 1.03;
-  margin: 0;
+  margin: 0 0 24px;
 }
 
-.partnerships-intro > p {
-  color: rgba(255, 248, 236, 0.76);
-  font-size: 18px;
+.ownership-models {
+  background: #6f1414;
+  border-radius: 0 8px 8px 0;
+  display: grid;
+  padding: 28px;
+}
+
+.ownership-model {
+  border-bottom: 1px solid rgba(242, 208, 137, 0.25);
+  padding: 28px 6px;
+}
+
+.ownership-model:last-child {
+  border-bottom: 0;
+}
+
+.ownership-model span {
+  color: #f2d089;
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.ownership-model p {
+  color: rgba(255, 248, 236, 0.86);
+  font-size: 17px;
 }
 
 .partnership-pillars {
-  background: #fbf8f2;
+  background: #180504;
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 0 7vw 96px;
-  transform: translateY(-34px);
+  padding: 88px 7vw;
 }
 
 .partnership-pillar {
-  background: #fffdf8;
-  border: 1px solid #eadfcd;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.98), rgba(248, 233, 204, 0.98));
+  border: 1px solid rgba(214, 170, 91, 0.55);
   border-radius: 8px;
-  min-height: 360px;
-  padding: 32px;
-  transition:
-    border-color 240ms ease,
-    box-shadow 240ms ease,
-    transform 240ms ease;
+  min-height: 330px;
+  padding: 34px;
+  position: relative;
 }
 
-.partnership-pillar:hover {
-  border-color: rgba(184, 132, 60, 0.72);
-  box-shadow: 0 22px 46px rgba(42, 9, 8, 0.12);
-  transform: translateY(-6px);
+.partnership-pillar::before {
+  background: linear-gradient(90deg, #6f1414, #d6aa5b);
+  content: "";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .partnership-pillar span {
@@ -143,63 +195,76 @@
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 3px;
-  margin-bottom: 58px;
+  margin-bottom: 48px;
 }
 
 .partnership-pillar h3 {
   color: #24130f;
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: clamp(30px, 3.4vw, 46px);
   line-height: 1.05;
   margin: 0 0 18px;
 }
 
 .owner-support {
-  align-items: start;
-  background:
-    linear-gradient(180deg, #fbf8f2, #fffaf0);
+  background: #fffaf0;
   display: grid;
-  gap: 44px;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1fr);
-  padding: 34px 7vw 108px;
+  gap: 58px;
+  grid-template-columns: minmax(0, 0.86fr) minmax(400px, 1fr);
+  padding: 98px 7vw;
+}
+
+.owner-support-copy {
+  align-self: start;
+  position: sticky;
+  top: 28px;
 }
 
 .owner-support-copy h2 {
   color: #24130f;
-  font-size: clamp(36px, 4.8vw, 70px);
-  line-height: 1.04;
+  font-size: clamp(38px, 5vw, 74px);
+  line-height: 1.03;
   margin: 0 0 22px;
 }
 
 .owner-support ul {
+  counter-reset: support;
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .owner-support li {
-  background: #fffdf8;
-  border: 1px solid rgba(184, 132, 60, 0.32);
-  border-radius: 999px;
+  align-items: center;
+  border-bottom: 1px solid rgba(184, 132, 60, 0.28);
   color: #5c211b;
+  display: grid;
+  font-size: clamp(20px, 2.4vw, 34px);
+  font-weight: 700;
+  gap: 24px;
+  grid-template-columns: 58px minmax(0, 1fr);
+  line-height: 1.08;
+  padding: 28px 0;
+}
+
+.owner-support li::before {
+  color: #b8843c;
+  content: counter(support, decimal-leading-zero);
+  counter-increment: support;
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.6px;
-  padding: 15px 18px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .partnership-process {
   background:
-    radial-gradient(circle at 82% 18%, rgba(214, 170, 91, 0.15), transparent 26%),
-    linear-gradient(135deg, #2a0908, #4b0e0c 56%, #2a0908);
+    linear-gradient(135deg, #2a0908, #4b0e0c 56%, #180504);
   color: #fff8ec;
   display: grid;
   gap: 52px;
-  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
-  padding: 92px 7vw 108px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
+  padding: 96px 7vw 110px;
 }
 
 .partnership-process h2 {
@@ -250,15 +315,21 @@
 }
 
 @media (max-width: 1080px) {
-  .partnerships-hero,
-  .partnerships-intro,
+  .partnerships-hero-card,
+  .partnerships-overview,
+  .partnership-pillars,
   .owner-support,
   .partnership-process {
     grid-template-columns: 1fr;
   }
 
-  .partnership-pillars {
-    grid-template-columns: 1fr;
+  .ownership-brief,
+  .ownership-models {
+    border-radius: 8px;
+  }
+
+  .owner-support-copy {
+    position: static;
   }
 
   .partnership-contact-link {
@@ -268,16 +339,26 @@
 
 @media (max-width: 620px) {
   .partnerships-hero {
-    min-height: 650px;
-    padding: 118px 5vw 74px;
+    min-height: auto;
+    padding: 96px 5vw 58px;
+  }
+
+  .partnerships-hero h1 {
+    font-size: clamp(40px, 13vw, 56px);
+    line-height: 1;
+  }
+
+  .partnerships-hero-copy > p:last-child {
+    font-size: 16px;
   }
 
   .partnerships-hero-card,
+  .ownership-brief,
   .partnership-pillar {
     padding: 28px 24px;
   }
 
-  .partnerships-intro,
+  .partnerships-overview,
   .partnership-pillars,
   .owner-support,
   .partnership-process {
@@ -285,8 +366,13 @@
     padding-right: 5vw;
   }
 
-  .owner-support ul {
+  .ownership-models {
+    padding: 18px;
+  }
+
+  .owner-support li {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .partnership-contact-link {
