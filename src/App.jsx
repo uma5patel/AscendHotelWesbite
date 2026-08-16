@@ -20,17 +20,30 @@ const routes = {
   "#/contact": ContactPage,
 };
 
+function getCurrentRoute() {
+  if (window.location.hash) {
+    return window.location.hash;
+  }
+
+  const path = window.location.pathname.replace(/\/$/, "");
+  return path ? `#${path}` : "#/";
+}
+
 function App() {
-  const [route, setRoute] = useState(window.location.hash || "#/");
+  const [route, setRoute] = useState(getCurrentRoute);
 
   useEffect(() => {
-    function handleHashChange() {
-      setRoute(window.location.hash || "#/");
+    function handleRouteChange() {
+      setRoute(getCurrentRoute());
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("hashchange", handleRouteChange);
+    window.addEventListener("popstate", handleRouteChange);
+    return () => {
+      window.removeEventListener("hashchange", handleRouteChange);
+      window.removeEventListener("popstate", handleRouteChange);
+    };
   }, []);
 
   const Page = routes[route] || HomePage;
