@@ -5,19 +5,14 @@ const RECIPIENT_EMAIL = "janki7patel@gmail.com";
 
 function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
     senderEmail: "",
-    phone: "",
     subject: "",
     message: "",
   });
-
-  const emailSubject = formData.subject.trim();
-  const emailBody = formData.message.trim();
-
-  const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(
-    emailSubject
-  )}&body=${encodeURIComponent(emailBody)}`;
+  const [status, setStatus] = useState({
+    type: "idle",
+    message: "",
+  });
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -27,9 +22,47 @@ function ContactPage() {
     }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    window.location.href = mailtoLink;
+    setStatus({ type: "sending", message: "Sending..." });
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          senderEmail: formData.senderEmail,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "Email could not be sent right now.");
+      }
+
+      setFormData({
+        senderEmail: "",
+        subject: "",
+        message: "",
+      });
+      setStatus({
+        type: "success",
+        message: "Your message was sent successfully.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Email could not be sent right now.",
+      });
+    }
   }
 
   return (
@@ -51,18 +84,6 @@ function ContactPage() {
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <label>
-            Your name
-            <input
-              name="name"
-              type="text"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Full name"
-              required
-            />
-          </label>
-
-          <label>
             Your email
             <input
               name="senderEmail"
@@ -71,17 +92,6 @@ function ContactPage() {
               onChange={handleChange}
               placeholder="you@example.com"
               required
-            />
-          </label>
-
-          <label>
-            Phone number
-            <input
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Optional"
             />
           </label>
 
@@ -110,8 +120,16 @@ function ContactPage() {
           </label>
 
           <div className="contact-actions">
-            <button type="submit">Send Email</button>
+            <button type="submit" disabled={status.type === "sending"}>
+              {status.type === "sending" ? "Sending..." : "Send Email"}
+            </button>
           </div>
+
+          {status.message ? (
+            <p className={`contact-status contact-status-${status.type}`} role="status">
+              {status.message}
+            </p>
+          ) : null}
         </form>
       </section>
     </main>

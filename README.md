@@ -1,16 +1,33 @@
-# React + Vite
+# Ascend Hotels Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React and Vite website for Ascend Hotels.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Contact Email Backend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The contact form posts to `api/send-email.js`, which is designed for a Vercel
+serverless deployment. It sends email through Resend without exposing the API
+key in the frontend.
 
-## Expanding the ESLint configuration
+Add these environment variables in the hosting dashboard:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+RESEND_API_KEY=re_your_resend_api_key_here
+RESEND_FROM_EMAIL="Ascend Hotels <onboarding@resend.dev>"
+```
+
+For production, replace `RESEND_FROM_EMAIL` with a verified sender/domain in
+Resend.
+
+## Checks
+
+```bash
+npm run lint
+npm run build
+```

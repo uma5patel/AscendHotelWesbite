@@ -93,7 +93,8 @@
 }
 
 .message-field,
-.contact-actions {
+.contact-actions,
+.contact-status {
   grid-column: 1 / -1;
 }
 
@@ -121,6 +122,37 @@
   border: 1px solid #d6aa5b;
   color: #24130f;
   cursor: pointer;
+}
+
+.contact-actions button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.contact-status {
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  padding: 14px 16px;
+}
+
+.contact-status-success {
+  background: #eef7ed;
+  border: 1px solid #b7d9b2;
+  color: #245526;
+}
+
+.contact-status-error {
+  background: #fff0ec;
+  border: 1px solid #e7b5a7;
+  color: #7a1a17;
+}
+
+.contact-status-sending {
+  background: #fffaf0;
+  border: 1px solid #eadfcd;
+  color: #5c211b;
 }
 
 @media (max-width: 840px) {
