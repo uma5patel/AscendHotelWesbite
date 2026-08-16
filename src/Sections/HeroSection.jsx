@@ -25,7 +25,7 @@ const moveY = progress * 120;
 
       <div className="hero-content">
         <p className="hero-kicker">Welcome to</p>
-        <h1>Ascend Hotels</h1>
+        <h1>Ascend Hotel Group</h1>
       </div>
 
       <div

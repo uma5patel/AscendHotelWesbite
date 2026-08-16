@@ -1,26 +1,36 @@
 import "./Navbar.css";
 import logo from "../assets/logo.jpg";
 
-function Navbar({ isSolid = false }) {
+const links = [
+  { href: "#/", label: "HOME" },
+  { href: "#/about", label: "ABOUT US" },
+  { href: "#/services", label: "SERVICES" },
+  { href: "#/properties", label: "OUR PROPERTIES" },
+  { href: "#/partnerships", label: "OWNER PARTNERSHIPS" },
+  { href: "#/careers", label: "CAREERS" },
+];
+
+function Navbar({ isSolid = false, currentRoute = "#/" }) {
   return (
     <nav className={isSolid ? "navbar navbar-solid" : "navbar"}>
       <div className="navbar-logo">
-  <img src={logo} alt="Ascend Hotels Logo" className="logo-image" />
+        <img src={logo} alt="Ascend Hotels Logo" className="logo-image" />
 
-  <div className="logo-divider"></div>
+        <div className="logo-divider"></div>
 
-  <div className="logo-text">
-    ASCEND HOTELS
-  </div>
-</div>
+        <div className="logo-text">ASCEND HOTELS</div>
+      </div>
 
       <div className="navbar-links">
-        <a href="#/">HOME</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">SERVICES</a>
-        <a href="#">OUR PROPERTIES</a>
-        <a href="#">OWNER PARTNERSHIPS</a>
-        <a href="#">CAREERS</a>
+        {links.map((link) => (
+          <a
+            className={currentRoute === link.href ? "active" : ""}
+            href={link.href}
+            key={link.href}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
 
       <a className="navbar-button" href="#/contact">
