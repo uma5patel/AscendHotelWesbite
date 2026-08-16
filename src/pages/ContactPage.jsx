@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import "./ContactPage.css";
 
 const RECIPIENT_EMAIL = "janki7patel@gmail.com";
@@ -12,20 +12,8 @@ function ContactPage() {
     message: "",
   });
 
-  const emailSubject = formData.subject.trim()
-    ? formData.subject.trim()
-    : "Ascend Hotels inquiry";
-
-  const emailBody = useMemo(() => {
-    return [
-      `Name: ${formData.name || "Not provided"}`,
-      `Email: ${formData.senderEmail || "Not provided"}`,
-      `Phone: ${formData.phone || "Not provided"}`,
-      "",
-      "Message:",
-      formData.message || "Not provided",
-    ].join("\n");
-  }, [formData]);
+  const emailSubject = formData.subject.trim();
+  const emailBody = formData.message.trim();
 
   const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(
     emailSubject
@@ -105,6 +93,7 @@ function ContactPage() {
               value={formData.subject}
               onChange={handleChange}
               placeholder="Hotel inquiry"
+              required
             />
           </label>
 
