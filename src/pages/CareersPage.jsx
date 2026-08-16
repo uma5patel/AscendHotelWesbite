@@ -50,9 +50,9 @@ function CareersPage() {
       <section className="careers-hero">
         <div className="careers-hero-copy">
           <p className="info-kicker">Careers</p>
-          <h1>Join The Ascend Hotels Team</h1>
+          <h1>Join The Ascend Hotel Group Team</h1>
           <p>
-            Hospitality is built by people who care. Ascend Hotels looks for
+            Hospitality is built by people who care. Ascend Hotel Group looks for
             dependable, thoughtful team members who want to serve guests well,
             learn the business, and grow into stronger hospitality leaders. We
             provide continuous training, career development, and a supportive
@@ -80,7 +80,7 @@ function CareersPage() {
           answer, and the comfortable stay guests remember. We value people who
           show up with respect, communicate clearly, take feedback well, and
           want to keep improving. From entry-level positions to management
-          roles, Ascend Hotels offers rewarding opportunities across service,
+          roles, Ascend Hotel Group offers rewarding opportunities across service,
           operations, marketing, and leadership.
         </p>
       </section>
@@ -119,7 +119,7 @@ function CareersPage() {
           <p className="info-kicker">Internships & Young Talent</p>
           <h2>Creating pathways for the next generation of hospitality.</h2>
           <p>
-            Ascend Hotels is passionate about bringing younger people into the
+            Ascend Hotel Group is passionate about bringing younger people into the
             industry through internships, mentorship, and hands-on exposure to
             hotel operations. Students and early-career applicants can learn how
             guest service, housekeeping, operations, brand standards, and

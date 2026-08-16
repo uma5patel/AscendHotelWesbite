@@ -68,7 +68,7 @@ function ContactPage() {
   return (
     <main className="contact-page">
       <section className="contact-hero">
-        <p className="contact-kicker">Contact Ascend Hotels</p>
+        <p className="contact-kicker">Contact Ascend Hotel Group</p>
         <h1>Send an Email</h1>
         <p className="contact-intro">
           Fill out the details below to create a properly formatted message for

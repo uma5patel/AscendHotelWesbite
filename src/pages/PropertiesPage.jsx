@@ -103,11 +103,11 @@ function PropertiesPage() {
       <section className="properties-hero">
         <img
           src={hotelPhotos.boardman[0]}
-          alt="Ascend Hotels property exterior"
+          alt="Ascend Hotel Group property exterior"
         />
         <div className="properties-hero-overlay"></div>
         <div className="properties-hero-content">
-          <p>Ascend Hotels</p>
+          <p>Ascend Hotel Group</p>
           <h1>Properties</h1>
         </div>
       </section>
@@ -117,7 +117,7 @@ function PropertiesPage() {
         <h2>Branded hotels managed with consistency, care, and ownership focus.</h2>
       </section>
 
-      <section className="properties-list" aria-label="Ascend Hotels portfolio">
+      <section className="properties-list" aria-label="Ascend Hotel Group portfolio">
         {properties.map((property, index) => (
           <article
             className={

@@ -14,7 +14,7 @@ function Navbar({ isSolid = false, currentRoute = "#/" }) {
   return (
     <nav className={isSolid ? "navbar navbar-solid" : "navbar"}>
       <div className="navbar-logo">
-        <img src={logo} alt="Ascend Hotels Logo" className="logo-image" />
+        <img src={logo} alt="Ascend Hotel Group Logo" className="logo-image" />
 
         <div className="logo-divider"></div>
 

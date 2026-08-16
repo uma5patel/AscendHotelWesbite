@@ -40,7 +40,7 @@ function AboutPage() {
     <main className="info-page about-page">
       <section className="about-hero">
         <div className="about-hero-copy">
-          <p className="info-kicker">About Ascend Hotels</p>
+          <p className="info-kicker">About Ascend Hotel Group</p>
           <h1>Hospitality With Purpose</h1>
           <p>
             Ascend Hotel Group is a family-led hospitality company focused on
@@ -49,7 +49,7 @@ function AboutPage() {
           </p>
         </div>
 
-        <div className="about-hero-card" aria-label="Ascend Hotels priorities">
+        <div className="about-hero-card" aria-label="Ascend Hotel Group priorities">
           <span>Our Focus</span>
           <strong>Comfort. Quality. Community.</strong>
           <p>

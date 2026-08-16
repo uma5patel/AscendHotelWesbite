@@ -1,6 +1,6 @@
-# Ascend Hotels Website
+# Ascend Hotel Group Website
 
-React and Vite website for Ascend Hotels.
+React and Vite website for Ascend Hotel Group.
 
 ## Development
 
@@ -19,7 +19,7 @@ Add these environment variables in the hosting dashboard:
 
 ```bash
 RESEND_API_KEY=re_your_resend_api_key_here
-RESEND_FROM_EMAIL="Ascend Hotels <onboarding@resend.dev>"
+RESEND_FROM_EMAIL="Ascend Hotel Group <onboarding@resend.dev>"
 ```
 
 For production, replace `RESEND_FROM_EMAIL` with a verified sender/domain in

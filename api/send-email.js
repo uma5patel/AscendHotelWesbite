@@ -28,7 +28,7 @@ export default async function handler(request, response) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail =
-    process.env.RESEND_FROM_EMAIL || "Ascend Hotels <onboarding@resend.dev>";
+    process.env.RESEND_FROM_EMAIL || "Ascend Hotel Group <onboarding@resend.dev>";
 
   if (!apiKey) {
     sendJson(response, 500, { error: "Email service is not configured." });

@@ -26,7 +26,7 @@ function ServicesSection() {
         <div className="gold-line"></div>
 
         <p className="services-description">
-          Ascend Hotels delivers complete hotel management solutions built on
+          Ascend Hotel Group delivers complete hotel management solutions built on
           expertise, partnership, and operational excellence.
         </p>
       </div>

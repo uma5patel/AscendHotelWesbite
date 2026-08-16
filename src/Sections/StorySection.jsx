@@ -9,7 +9,7 @@ function StorySection() {
 
         <img
           src={storyImage}
-          alt="Ascend Hotels team"
+          alt="Ascend Hotel Group team"
           className="story-image"
         />
       </div>
@@ -23,7 +23,7 @@ function StorySection() {
         </h3>
 
         <p>
-          Ascend Hotels is a family driven hospitality organization focused on
+          Ascend Hotel Group is a family driven hospitality organization focused on
           exceptional guest experiences, operational excellence, and long term
           partnerships.
         </p>

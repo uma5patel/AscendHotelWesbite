@@ -4,7 +4,7 @@ import "./ServicesPage.css";
 const servicePillars = [
   {
     title: "Brand Compliance",
-    text: "Ascend Hotels ensures strict brand compliance to maintain consistency, quality, and integrity across all properties. Our services include regular audits, staff training, and implementation of brand standards across operations, guest experience, visual identity, and communication.",
+    text: "Ascend Hotel Group ensures strict brand compliance to maintain consistency, quality, and integrity across all properties. Our services include regular audits, staff training, and implementation of brand standards across operations, guest experience, visual identity, and communication.",
     points: [
       "Regular brand audits",
       "Staff training and standards support",
@@ -70,7 +70,7 @@ function ServicesPage() {
           <p className="info-kicker">Services</p>
           <h1>Hotel Management That Protects The Brand And Guest Experience</h1>
           <p>
-            Ascend Hotels supports owners and hotel teams with brand compliance,
+            Ascend Hotel Group supports owners and hotel teams with brand compliance,
             revenue management, daily operations, training, and guest-focused
             systems built for consistent performance.
           </p>

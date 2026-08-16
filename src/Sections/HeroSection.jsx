@@ -20,7 +20,7 @@ const moveY = progress * 120;
 
   return (
     <section className="hero-section">
-      <img src={heroImage} alt="Ascend Hotels property" className="hero-image" />
+      <img src={heroImage} alt="Ascend Hotel Group property" className="hero-image" />
       <div className="hero-overlay"></div>
 
       <div className="hero-content">

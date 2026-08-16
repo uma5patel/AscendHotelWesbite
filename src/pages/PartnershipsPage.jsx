@@ -63,7 +63,7 @@ function PartnershipsPage() {
           <p className="info-kicker">Owner Partnerships</p>
           <h1>Hotel Ownership Partnerships</h1>
           <p>
-            Ascend Hotels works with ownership partners interested in hotel
+            Ascend Hotel Group works with ownership partners interested in hotel
             investment, co-ownership, and percentage-based ownership
             opportunities. These partnerships are separate from Ascend Hotel
             Group's internal leadership team and are built around clear
