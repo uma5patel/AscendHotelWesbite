@@ -1,4 +1,4 @@
-const RECIPIENT_EMAIL = "janki7patel@gmail.com";
+const RECIPIENT_EMAIL = "jankipatel@ascendhotelgroup.com";
 
 function sendJson(response, statusCode, payload) {
   response.status(statusCode).json(payload);

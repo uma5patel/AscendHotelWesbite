@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ContactPage.css";
 
-const RECIPIENT_EMAIL = "janki7patel@gmail.com";
+const RECIPIENT_EMAIL = "jankipatel@ascendhotelgroup.com";
 
 function ContactPage() {
   const [formData, setFormData] = useState({
