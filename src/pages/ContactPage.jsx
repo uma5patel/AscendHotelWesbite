@@ -50,8 +50,8 @@ function ContactPage() {
         <p className="contact-kicker">Contact Ascend Hotels</p>
         <h1>Send an Email</h1>
         <p className="contact-intro">
-          Fill out the details below and your email app will open with a
-          properly formatted message addressed to {RECIPIENT_EMAIL}.
+          Fill out the details below to create a properly formatted message for
+          {RECIPIENT_EMAIL}.
         </p>
       </section>
 
@@ -120,17 +120,7 @@ function ContactPage() {
             />
           </label>
 
-          <div className="email-note">
-            <p>
-              Your email app will open with the message addressed to{" "}
-              <strong>{RECIPIENT_EMAIL}</strong>.
-            </p>
-          </div>
-
           <div className="contact-actions">
-            <a className="secondary-email-link" href={`mailto:${RECIPIENT_EMAIL}`}>
-              Open blank email
-            </a>
             <button type="submit">Send Email</button>
           </div>
         </form>

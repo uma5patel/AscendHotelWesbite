@@ -93,7 +93,6 @@
 }
 
 .message-field,
-.email-note,
 .contact-actions {
   grid-column: 1 / -1;
 }
@@ -103,19 +102,6 @@
   resize: vertical;
 }
 
-.email-note {
-  border: 1px solid #eadfcd;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #fffaf0, #fbf0db);
-  padding: 18px 20px;
-}
-
-.email-note p {
-  color: #3a251f;
-  line-height: 1.5;
-  margin: 0;
-}
-
 .contact-actions {
   display: flex;
   align-items: center;
@@ -123,13 +109,11 @@
   justify-content: flex-end;
 }
 
-.contact-actions button,
-.secondary-email-link {
+.contact-actions button {
   border-radius: 999px;
   font-size: 15px;
   font-weight: 700;
   padding: 13px 22px;
-  text-decoration: none;
 }
 
 .contact-actions button {
@@ -137,11 +121,6 @@
   border: 1px solid #d6aa5b;
   color: #24130f;
   cursor: pointer;
-}
-
-.secondary-email-link {
-  border: 1px solid #cfbea1;
-  color: #3a251f;
 }
 
 @media (max-width: 840px) {
@@ -152,11 +131,9 @@
 
   .contact-actions {
     align-items: stretch;
-    flex-direction: column-reverse;
   }
 
-  .contact-actions button,
-  .secondary-email-link {
+  .contact-actions button {
     text-align: center;
   }
 }
