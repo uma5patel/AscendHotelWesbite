@@ -70,6 +70,7 @@ function ContactPage() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Full name"
+              required
             />
           </label>
 
@@ -81,6 +82,7 @@ function ContactPage() {
               value={formData.senderEmail}
               onChange={handleChange}
               placeholder="you@example.com"
+              required
             />
           </label>
 
@@ -114,25 +116,22 @@ function ContactPage() {
               onChange={handleChange}
               rows="8"
               placeholder="Write the email content here"
+              required
             />
           </label>
 
-          <div className="email-preview" aria-label="Email preview">
-            <p className="preview-title">Preview</p>
+          <div className="email-note">
             <p>
-              <strong>To:</strong> {RECIPIENT_EMAIL}
+              Your email app will open with the message addressed to{" "}
+              <strong>{RECIPIENT_EMAIL}</strong>.
             </p>
-            <p>
-              <strong>Subject:</strong> {emailSubject}
-            </p>
-            <pre>{emailBody}</pre>
           </div>
 
           <div className="contact-actions">
             <a className="secondary-email-link" href={`mailto:${RECIPIENT_EMAIL}`}>
               Open blank email
             </a>
-            <button type="submit">Open Email App</button>
+            <button type="submit">Send Email</button>
           </div>
         </form>
       </section>
